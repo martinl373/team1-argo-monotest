@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: guestbook
+spec:
+  project: team1-project
+  destination:
+    name: ''
+    namespace: runtime-team1
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: guestbook
+    repoURL: 'https://github.com/martinl373/team1-argo-monotest.git'
+    targetRevision: main
+    directory:
+      recurse: true
