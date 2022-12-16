@@ -3,10 +3,10 @@ kind: Application
 metadata:
   name: guestbook
 spec:
-  project: team1-project
+  project: team-cool-kids
   destination:
     name: ''
-    namespace: runtime-team1
+    namespace: team-cool-kids
     server: 'https://kubernetes.default.svc'
   source:
     path: guestbook
