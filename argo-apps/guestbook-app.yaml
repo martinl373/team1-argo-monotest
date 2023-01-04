@@ -5,7 +5,6 @@ metadata:
 spec:
   project: team-cool-kids-runtime
   destination:
-    name: ''
     namespace: team-cool-kids-runtime
     server: 'https://kubernetes.default.svc'
   source:
@@ -14,3 +13,6 @@ spec:
     targetRevision: main
     directory:
       recurse: true
+  syncPolicy:
+    automated:
+      prune: true
